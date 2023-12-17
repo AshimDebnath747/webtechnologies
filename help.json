@@ -1,0 +1,56 @@
+<?php
+$submit=false;
+if(isset($_POST["name"])){
+$server = "localhost";
+ $username = "root";
+ $password = "";
+
+ 
+ $con = mysqli_connect($server,$username,$password);
+
+ if(!$con){
+    die("connection falied!");
+ }
+//  else{
+//     echo "connection secured!";
+//  }
+$name = $_POST['name'];
+$gmail = $_POST['gmail'];
+$number = $_POST['number'];
+$sql = "INSERT INTO `form`.`form` (`name`, `gmail`, `phone`) VALUES ( '$name', '$gmail', '$number');";
+// echo $sql;
+
+
+// if($con->query($sql) == true)
+// {
+//     echo "data inserted in data base";
+// }
+// else{
+//     echo "connection failed ";
+// }
+$con->close();
+$submit=true;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="gmail" name="gmail" id="" placeholder="Enter your email">
+        <input type="number" name="number" placeholder="Enter your phone number">
+        <button class="btn">Submit</button>
+    </form>
+    <?php
+    if($submit){
+       echo "<h1>you have successfully inserted your form!</h1";
+    }
+    ?>
+</body>
+</html>

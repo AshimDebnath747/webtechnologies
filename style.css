@@ -1,0 +1,105 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+body{
+    margin:1px 20px;
+    padding: 2px 10px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    
+}
+nav a{
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+}
+nav a:hover{
+    color: aqua;
+}
+nav #name{
+    margin-right: 400px;
+}
+article{
+    margin: 10px;
+    padding:20px;
+    
+    width: 40%;
+}
+.contents{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.contents article{
+    box-shadow: 0px 2px 5px -2px rgb(3, 3, 3);
+}
+img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+.profile{
+    display: flex;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    
+}
+footer span p{
+    font-weight: bold;
+}
+.alert{
+    color: greenyellow;
+    font-size: 16px;
+    text-align: center;
+}
+form{
+    width: 230px;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-top: 2px;
+    box-shadow: 1px 1px 5px ;
+}
+form  .btn{
+    background-color: white;
+    margin-left: 50px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    
+
+}
+form  .btn:focus{
+       background-color:aquamarine;
+}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    appearance: none;
+}
+form #check{
+    margin-top: 15px;
+   
+}
+input{
+    outline:none;
+}
+.logout_a{
+    display:none;
+}
+.logout_p{
+    margin: auto;
+}
+.alert_red{
+    color: red;
+    font-size: 16px;
+    text-align: center;
+}
